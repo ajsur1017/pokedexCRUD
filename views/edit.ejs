@@ -1,0 +1,18 @@
+<html>
+<%- include("./partials/head.ejs") %>
+
+    <body>
+        
+            <h1>Update Pokemon Page</h1>
+            <form method="GET" action="/pokemon"></form>
+            <form action="/pokemon/<%= index %>?_method=PUT" method="POST">
+                Name: <input type="text" name="name" value="<%=pokemon.name %>"><br>
+                Id#: <input tpye="number" name="id" value="<%=pokemon.id %>"><br>
+                URL: <input type="text" name="img" value="<%= pokemon.img %>" ><br>
+                Type: <input type="text" name="type" value="<%=pokemon.type %>"><br>
+               <input type="submit" value="Update Pokemon">
+            </form>
+            
+    </body>
+
+</html>

@@ -8,19 +8,24 @@
             <ul>
                 <td><%= pokemon.name %></td><br>
                 <td>ID# <%= pokemon.id %></td><br>
-                <td>Type 1: <%= pokemon.type[0] %></td><br>
-                <td>Type 2: <%= pokemon.type[1] %></td><br>
+                <td>Type <%= pokemon.type %></td><br>
+                
             </ul>
 
           
             <br><form mehtod="GET" action="/pokemon">
-            <button type="submit">Back</button></form>
+                <button type="submit">Back</button>
+            </form>
+
+            <!-- <form action="/pokemon/<%=pokemon.id%>/edit">
+                <input type="submit" value="Edit">
+            </form> -->
 
             <form action="/pokemon/id?_method=DELETE" method="POST">
                 <input type="submit" value="DELETE" style="color: red">
             </form>
-                
-
+            
+            
 
 
 

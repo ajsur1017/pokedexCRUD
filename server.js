@@ -21,10 +21,23 @@ app.delete('/pokemon/:index', (req, res) => {
     pokemon.splice(req.params.index,1)
     res.redirect("/pokemon")
 })
-// Post
+// Update
+app.put("/pokemon/:index", (req, res) => {
+    pokemon[req.params.index] = req.body
+    res.redirect('/pokemon')
+})
+// Create
 app.post('/pokemon', (req, res) => {
     pokemon.push(req.body)
     res.redirect("/pokemon")
+})
+// Edit
+app.get('/pokemon/:index/edit', (req, res) => {
+    res.render('edit.ejs', {
+        pokemon: pokemon[req.params.index],
+        index: req.params.index,
+        title: "Pokedex - Edit Page"
+    })
 })
 // Show
 app.get('/pokemon/:index', (req, res) => {

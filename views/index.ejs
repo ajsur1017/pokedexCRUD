@@ -8,9 +8,11 @@
             </form>
             <% for(let i=0; i < pokemon.length; i++) { %>
             <a href="/pokemon/<%=i%>"><img  src="<%= pokemon[i].img %>" alt="its not working"></a>
+                
+                <form action="/pokemon/<%=i%>/edit">
+                    <input type="submit" value="Edit">
+                </form>
                 <% } %>
-            
-
 
 
 
