@@ -1,0 +1,30 @@
+<html>
+    <%- include("./partials/head.ejs") %>
+    <body>
+        <div class="container">
+            <h1>Pokedex Show</h1>
+           
+            <img src="<%= pokemon.img %>" alt="its not working"><br>
+            <ul>
+                <td><%= pokemon.name %></td><br>
+                <td>ID# <%= pokemon.id %></td><br>
+                <td>Type 1: <%= pokemon.type[0] %></td><br>
+                <td>Type 2: <%= pokemon.type[1] %></td><br>
+            </ul>
+
+          
+            <br><form mehtod="GET" action="/pokemon">
+            <button type="submit">Back</button></form>
+
+            <form action="/pokemon/id?_method=DELETE" method="POST">
+                <input type="submit" value="DELETE" style="color: red">
+            </form>
+                
+
+
+
+
+
+        </div>
+    </body>
+</html>

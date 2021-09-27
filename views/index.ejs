@@ -1,0 +1,20 @@
+<html>
+    <%- include("./partials/head.ejs") %>
+    <body>
+        <div class="container">
+            <h1>Pokedex Index</h1>
+            <form method="get" action="/pokemon/new">
+                <button type="submit">New</button>
+            </form>
+            <% for(let i=0; i < pokemon.length; i++) { %>
+            <a href="/pokemon/<%=i%>"><img  src="<%= pokemon[i].img %>" alt="its not working"></a>
+                <% } %>
+            
+
+
+
+
+
+        </div>
+    </body>
+</html>

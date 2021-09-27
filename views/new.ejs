@@ -1,0 +1,22 @@
+<html>
+    <%- include("./partials/head.ejs") %>
+    <body>
+        <div class="container">
+            <h1>New Pokemon</h1>
+        
+            <form action="/pokemon" method="POST">
+            <input type="number" name="id" placeholder="id#"><br>
+            <input type="text" name="name" placeholder="name"><br>
+            <input type="url" name="img" placeholder="img URL"><br>
+            <input type="text" name="type" placeholder="type 1"><br>
+            <input type="text" name="type" placeholder="type 2 (optional)"><br>
+            <input type="submit" value="Add">
+            </form>
+
+
+
+
+
+        </div>
+    </body>
+</html>
